@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI TikTok Shop Affiliate — AI Leverage Blueprint</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --pink: #ff2d55; --teal: #0dd9a4; --purple: #7b61ff;
+  --amber: #ff9f0a; --green: #30d158;
+  --text: #e8e8ef; --muted: #8888a0; --hint: #6b6966;
+  --card-bg: #12121a; --bg: #0a0a0f;
+  --border: rgba(255,255,255,0.09); --border-mid: rgba(255,255,255,0.15);
+}
+body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--bg); color: var(--text); font-size: 14px; line-height: 1.6; padding: 20px 16px 56px; max-width: 720px; margin: 0 auto; }
+body::before { content:''; position:fixed; inset:0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events:none; z-index:9999; }
+.hero { border-radius: 18px; padding: 30px 26px 26px; margin-bottom: 22px; position: relative; overflow: hidden; background: linear-gradient(135deg, #0f0f0f 0%, #1a1020 40%, #0d1f1a 100%); }
+.hero::before { content:''; position:absolute; top:-60px; right:-60px; width:220px; height:220px; border-radius:50%; background: radial-gradient(circle, rgba(255,45,85,0.25) 0%, transparent 70%); }
+.hero::after { content:''; position:absolute; bottom:-40px; left:-30px; width:160px; height:160px; border-radius:50%; background: radial-gradient(circle, rgba(13,217,164,0.2) 0%, transparent 70%); }
+.hero-eyebrow { font-size: 10px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--teal); margin-bottom: 10px; position: relative; z-index: 1; }
+.hero h1 { font-size: 24px; font-weight: 700; color: #fff; line-height: 1.15; margin-bottom: 10px; position: relative; z-index: 1; }
+.hero h1 span { color: var(--pink); }
+.hero p { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.6; position: relative; z-index: 1; max-width: 520px; }
+.badge-row { display: flex; gap: 7px; margin-top: 16px; flex-wrap: wrap; position: relative; z-index: 1; }
+.badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.85); font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 20px; }
+.progress-wrap { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.progress-track { flex: 1; height: 5px; background: var(--border-mid); border-radius: 10px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 10px; background: linear-gradient(90deg, var(--pink), var(--teal)); transition: width 0.4s ease; }
+.progress-label { font-size: 11px; color: var(--muted); white-space: nowrap; }
+.progress-pct { font-size: 12px; font-weight: 600; color: var(--text); white-space: nowrap; }
+.phase-nav { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+.phase-pill { background: var(--card-bg); border: 0.5px solid var(--border); color: var(--muted); font-size: 11px; font-weight: 600; padding: 6px 13px; border-radius: 20px; cursor: pointer; transition: all 0.18s; white-space: nowrap; user-select: none; }
+.phase-pill:hover { border-color: var(--pink); color: var(--pink); }
+.phase-pill.active { background: var(--pink); border-color: var(--pink); color: #fff; }
+.phase-content { display: none; }
+.phase-content.active { display: block; }
+.phase-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding: 14px 18px; border-radius: 12px; background: var(--card-bg); border: 0.5px solid var(--border); }
+.phase-icon { width: 42px; height: 42px; border-radius: 11px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.phase-meta h2 { font-size: 15px; font-weight: 600; }
+.phase-meta p { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.step-card { background: var(--card-bg); border: 0.5px solid var(--border); border-radius: 14px; padding: 16px 18px; margin-bottom: 10px; transition: border-color 0.2s; cursor: pointer; }
+.step-card:hover { border-color: var(--pink); }
+.step-card.open { border-color: var(--pink); border-width: 1px; }
+.step-header { display: flex; align-items: center; gap: 13px; }
+.step-num { min-width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: #fff; flex-shrink: 0; }
+.step-title-wrap { flex: 1; min-width: 0; }
+.step-title { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.3; }
+.step-subtitle { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.step-toggle { font-size: 20px; color: var(--muted); transition: transform 0.2s; flex-shrink: 0; user-select: none; line-height: 1; }
+.step-card.open .step-toggle { transform: rotate(45deg); }
+.step-body { display: none; padding-top: 14px; border-top: 0.5px solid var(--border); margin-top: 14px; }
+.step-card.open .step-body { display: block; }
+.step-body > p { font-size: 13px; color: var(--muted); line-height: 1.65; margin-bottom: 10px; }
+.checklist { list-style: none; margin: 8px 0; }
+.checklist li { display: flex; align-items: flex-start; gap: 9px; font-size: 13px; color: var(--muted); line-height: 1.55; padding: 5px 0; border-bottom: 0.5px solid var(--border); }
+.checklist li:last-child { border-bottom: none; }
+.check-icon { min-width: 16px; height: 16px; border-radius: 4px; background: #0dd9a428; border: 1px solid #0dd9a4; display: flex; align-items: center; justify-content: center; margin-top: 2px; flex-shrink: 0; }
+.check-icon::after { content: '✓'; font-size: 9px; color: #0dd9a4; font-weight: 700; }
+.callout { border-radius: 0 9px 9px 0; padding: 10px 14px; font-size: 12px; color: var(--text); line-height: 1.6; margin: 10px 0; }
+.callout-red { background: #ff2d5510; border-left: 3px solid var(--pink); }
+.callout-green { background: #0dd9a410; border-left: 3px solid var(--teal); }
+.callout-amber { background: #ff9f0a10; border-left: 3px solid var(--amber); }
+.callout-purple { background: #7b61ff10; border-left: 3px solid var(--purple); }
+.callout strong { font-weight: 600; color: var(--text); }
+.warning-block { background: #ff2d5510; border: 1px solid #ff2d5530; border-radius: 10px; padding: 12px 14px; margin: 10px 0; font-size: 12px; color: var(--text); line-height: 1.6; }
+.warning-block .warn-title { font-weight: 700; color: var(--pink); font-size: 12px; margin-bottom: 5px; display: flex; align-items: center; gap: 6px; }
+.section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--hint); margin: 12px 0 7px; }
+.tools-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.tool-chip { display: flex; align-items: center; gap: 5px; background: var(--bg); border: 0.5px solid var(--border-mid); border-radius: 7px; padding: 5px 10px; font-size: 12px; font-weight: 500; color: var(--text); }
+.tool-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+.metrics-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
+.metric-card { background: var(--bg); border: 0.5px solid var(--border); border-radius: 10px; padding: 11px 10px; text-align: center; }
+.metric-val { font-size: 18px; font-weight: 700; color: var(--pink); line-height: 1; }
+.metric-lbl { font-size: 10px; color: var(--muted); margin-top: 4px; line-height: 1.3; }
+.formula-box { background: var(--bg); border: 0.5px solid var(--border-mid); border-radius: 10px; padding: 14px 16px; margin: 10px 0; font-size: 12px; line-height: 1.8; }
+.formula-box .f-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 8px; }
+.f-row { display: flex; align-items: flex-start; gap: 10px; padding: 3px 0; }
+.f-num { min-width: 22px; height: 22px; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; flex-shrink: 0; margin-top: 1px; }
+.f-text { font-size: 13px; color: var(--text); }
+.f-sub { font-size: 11px; color: var(--muted); display: block; margin-top: 1px; }
+.rule-box { background: var(--bg); border: 1px solid var(--border-mid); border-radius: 10px; padding: 12px 16px; margin: 10px 0; display: flex; align-items: flex-start; gap: 12px; }
+.rule-label { background: var(--pink); color: #fff; font-size: 10px; font-weight: 800; padding: 3px 7px; border-radius: 5px; white-space: nowrap; flex-shrink: 0; margin-top: 1px; letter-spacing: 0.05em; }
+.rule-label.teal { background: var(--teal); color: #0d2a22; }
+.rule-label.amber { background: var(--amber); color: #3a2000; }
+.rule-label.purple { background: var(--purple); }
+.rule-text { font-size: 13px; color: var(--text); line-height: 1.5; }
+.n1 { background: #ff2d55; } .n2 { background: #7b61ff; }
+.n3 { background: #0dd9a4; color: #0a2a20 !important; }
+.n4 { background: #ff9f0a; }
+.n5 { background: #30d158; color: #0a2510 !important; }
+.bg1 { background:#ff2d5512; border-color: #ff2d5528; }
+.bg2 { background:#7b61ff12; border-color: #7b61ff28; }
+.bg3 { background:#0dd9a412; border-color: #0dd9a428; }
+.bg4 { background:#ff9f0a12; border-color: #ff9f0a28; }
+.bg5 { background:#30d15812; border-color: #30d15828; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">AI Wealth Group</div>
+  <h1>AI TikTok Shop <span>Affiliate</span><br>— AI Leverage Blueprint</h1>
+  <p>The full step by step structured plan strategy with proven tactics, setup, AI content production, affiliate access, and scaling — including the things others won't tell you.</p>
+  <div class="badge-row">
+    <span class="badge">5 phases</span>
+    <span class="badge">20 steps</span>
+    <span class="badge">AI-powered</span>
+    <span class="badge">No inventory</span>
+    <span class="badge">Faceless optional</span>
+  </div>
+</div>
+
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <span class="progress-label">Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="prog-fill" style="width:0%"></div></div>
+  <span class="progress-pct" id="prog-pct">0 / 20 steps</span>
+</div>
+
+<!-- NAV -->
+<div class="phase-nav">
+  <div class="phase-pill active" onclick="showPhase(0,this)">1. Foundation</div>
+  <div class="phase-pill" onclick="showPhase(1,this)">2. Account</div>
+  <div class="phase-pill" onclick="showPhase(2,this)">3. AI Model &amp; Products</div>
+  <div class="phase-pill" onclick="showPhase(3,this)">4. Content Engine</div>
+  <div class="phase-pill" onclick="showPhase(4,this)">5. Scale &amp; Profit</div>
+</div>
+
+
+<!-- ===== PHASE 1: FOUNDATION ===== -->
+<div class="phase-content active" id="phase-0">
+  <div class="phase-header bg1">
+    <div class="phase-icon" style="background:#ff2d5520">🧠</div>
+    <div class="phase-meta"><h2>Phase 1 — Foundation &amp; Mindset</h2><p>Understand the model fully before investing a single hour.</p></div>
+  </div>
+
+  <!-- Step 1 -->
+  <div class="step-card" onclick="toggleStep(this,1)">
+    <div class="step-header">
+      <div class="step-num n1">1</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Understand exactly how you make money</div>
+        <div class="step-subtitle">The full commission model, payout timeline, and what actually matters</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>TikTok Shop Affiliate = you promote products via video or LIVE → viewer clicks the product link → purchases → you earn a commission. Zero inventory, zero shipping, zero customer service.</p>
+      <div class="metrics-grid">
+        <div class="metric-card"><div class="metric-val">10–50%</div><div class="metric-lbl">Typical commission rate</div></div>
+        <div class="metric-card"><div class="metric-val">~15 days</div><div class="metric-lbl">Post-delivery payout</div></div>
+        <div class="metric-card"><div class="metric-val">$0</div><div class="metric-lbl">Inventory required</div></div>
+      </div>
+      <div class="callout callout-purple" style="margin-top:10px"><strong>How commissions work:</strong> Rates are set by each seller and typically range 10–50%, though they can go from 1% up to 80% depending on the product and brand strategy. You receive payment approximately 15 days after order delivery — not immediately after the sale. Some orders take up to 31 days if the seller has a longer settlement period. Local product commissions can be withdrawn manually at any time; cross-border commissions auto-withdraw every Wednesday.</div>
+      <div class="callout callout-green"><strong>The AI advantage:</strong> You can run this completely faceless using AI-generated video, AI voiceover, and an AI influencer model — scaling to 10–15 videos/day with minimal manual effort.</div>
+      <div class="callout callout-amber"><strong>The real monetization unlock is 5,000 followers</strong> — not 1,000. At 1,000 you enter a restricted 30-day "Creator Pilot Program" capped at 5 shoppable videos and 3 LIVEs per week. You must also generate at least 10 orders during the pilot and pass a probation quiz to unlock full access. Reaching 5,000 followers lifts all limits immediately. Plan your growth timeline accordingly.</div>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step-card" onclick="toggleStep(this,2)">
+    <div class="step-header">
+      <div class="step-num n1">2</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Choose your niche strategically</div>
+        <div class="step-subtitle">The niche determines your AI model, product selection, and content style</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Pick a niche where your AI model and the product category naturally align. This "unfair advantage" is one of the biggest levers for conversion.</p>
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>Beauty &amp; Anti-aging</strong> — build a 35–50 year old model, promote skincare transformations. High disposable income, emotional buyers.</li>
+        <li><div class="check-icon"></div><strong>Health &amp; Supplements</strong> — fit model, weight loss or energy products. Before/after format converts extremely well.</li>
+        <li><div class="check-icon"></div><strong>Home &amp; Kitchen gadgets</strong> — demo-based content, no model needed. Product does the talking.</li>
+        <li><div class="check-icon"></div><strong>Pet products</strong> — emotionally driven purchases, viral organic potential.</li>
+        <li><div class="check-icon"></div><strong>Tech accessories</strong> — curiosity hooks, wide audience.</li>
+        <li><div class="check-icon"></div><strong>Hair loss / hair growth</strong> — strong problem-solving angle, high commission products.</li>
+      </ul>
+      <div class="callout callout-amber"><strong>Additional insights:</strong> A 35+ female AI model in beauty or wellness outperforms younger models because that demographic has higher disposable income and responds more strongly to transformation-based content.</div>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step-card" onclick="toggleStep(this,3)">
+    <div class="step-header">
+      <div class="step-num n1">3</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Set up your core tool stack</div>
+        <div class="step-subtitle">What you actually need — free to start, upgrade when earning</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <div class="section-label">AI Script &amp; Copy</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--pink)"></div>Claude / ChatGPT</div>
+      </div>
+      <div class="section-label">AI Model / Avatar Creation</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--purple)"></div>Higgsfield AI</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--purple)"></div>Nano Banana Pro</div>
+      </div>
+      <div class="section-label">AI Video Generation</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--teal)"></div>CapCut (free — start here)</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--teal)"></div>Kling AI</div>
+      </div>
+      <div class="section-label">AI Voiceover</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--amber)"></div>ElevenLabs (best quality)</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--amber)"></div>TikTok native TTS (free)</div>
+      </div>
+      <div class="section-label">Product Research</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--green)"></div>TikTok Creative Center</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--green)"></div>Kalodata</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--green)"></div>TikTok Shop Marketplace</div>
+      </div>
+      <div class="callout callout-green"><strong>Free start stack:</strong> CapCut + TikTok Creative Center + Claude + TikTok native TTS. That's enough for your first 10–20 videos at $0 cost. Only upgrade tools after your first commissions hit.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== PHASE 2: ACCOUNT ===== -->
+<div class="phase-content" id="phase-1">
+  <div class="phase-header bg2">
+    <div class="phase-icon" style="background:#7b61ff20">📱</div>
+    <div class="phase-meta"><h2>Phase 2 — TikTok Account Setup</h2><p>Create, optimize, and grow your account to the 5k unlock threshold.</p></div>
+  </div>
+
+  <!-- Step 4 -->
+  <div class="step-card" onclick="toggleStep(this,4)">
+    <div class="step-header">
+      <div class="step-num n2">4</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Create and configure your Business account</div>
+        <div class="step-subtitle">Business accounts unlock TikTok Shop and all affiliate features</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Sign up with email (not phone — easier to manage multiple accounts later)</li>
+        <li><div class="check-icon"></div>Settings → Manage Account → Switch to Business Account</li>
+        <li><div class="check-icon"></div>Category: match your niche (Beauty, Health, Home &amp; Garden, etc.)</li>
+        <li><div class="check-icon"></div>Username: clean, niche-relevant (@glowskinfinds, @painfreeback, @kitchenpro)</li>
+        <li><div class="check-icon"></div>Profile photo: AI-generated brand logo or clean headshot (use Canva AI or Midjourney)</li>
+        <li><div class="check-icon"></div>Bio: one problem you solve + soft CTA ("Finds that actually work ↓")</li>
+        <li><div class="check-icon"></div>Link in bio: set up Linktree or TikTok's native link</li>
+      </ul>
+      <div class="callout callout-green"><strong>Eligible countries for TikTok Shop Affiliate (2026):</strong> United States, United Kingdom, Germany, France, Italy, Spain, Ireland, Japan, Singapore, Indonesia, Malaysia, Thailand, Vietnam, Philippines, Mexico, Brazil. If you are outside these countries, see Step 7 for the LLC setup path.</div>
+    </div>
+  </div>
+
+  <!-- Step 5 -->
+  <div class="step-card" onclick="toggleStep(this,5)">
+    <div class="step-header">
+      <div class="step-num n2">5</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Reach 5,000 followers — your growth strategy</div>
+        <div class="step-subtitle">The two paths: organic and the shortcut (with honest risk assessment)</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>You need 5,000 followers for full monetization access. Here are the paths creators use:</p>
+      <div class="section-label">Organic Growth Methods</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Post 10–15 AI videos per day for the first 2–3 weeks — volume at this stage beats quality</li>
+        <li><div class="check-icon"></div>Use trending sounds in your niche (check TikTok Creative Center daily)</li>
+        <li><div class="check-icon"></div>Stitch or duet viral content in your niche — borrow their distribution</li>
+        <li><div class="check-icon"></div>Use 3–5 niche-specific hashtags + 1–2 broad ones per post</li>
+        <li><div class="check-icon"></div>Hook in first 1–2 seconds is everything — test multiple hooks for the same video</li>
+        <li><div class="check-icon"></div>"Teamwork method": join follow-for-follow communities in your niche on Discord or Telegram to accelerate early growth</li>
+      </ul>
+      <div class="section-label">The Account Purchase Option (Know the Risks First)</div>
+      <div class="warning-block">
+        <div class="warn-title">⚠ Important: Read before deciding</div>
+        Some creators recommend buying a vetted account with an existing follower base to skip the growth phase. This can save weeks. However, you must understand the risks:<br><br>
+        • Buying/selling accounts violates TikTok's Terms of Service — your account can be permanently banned without warning or appeal.<br>
+        • You have no recourse if the account gets banned after purchase — the money is gone.<br>
+        • Some "vetted suppliers" sell low-quality or bot-inflated accounts that underperform.<br><br>
+        <strong>If you do pursue this route:</strong> only use suppliers with verifiable track records, verified real followers, and ideally some existing engagement history. Treat the purchase price as money you could lose entirely. This is a risk-reward calculation — not a recommendation.
+      </div>
+      <div class="callout callout-amber"><strong>Fastest safe path:</strong> High-volume AI content posting (10–15/day) combined with trending sounds and the teamwork method can reach 5k followers in 3–5 weeks organically for most niches.</div>
+    </div>
+  </div>
+
+  <!-- Step 6 -->
+  <div class="step-card" onclick="toggleStep(this,6)">
+    <div class="step-header">
+      <div class="step-num n2">6</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Access the TikTok Shop Affiliate Center</div>
+        <div class="step-subtitle">The dashboard where all your affiliate activity lives</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li><div class="check-icon"></div>TikTok App → Profile → Menu (≡) → Creator Tools → TikTok Shop → Affiliate</li>
+        <li><div class="check-icon"></div>Or visit: affiliate.tiktok.com and log in</li>
+        <li><div class="check-icon"></div>Complete identity verification (government ID required)</li>
+        <li><div class="check-icon"></div>Add payout method: bank account or PayPal (region-dependent)</li>
+        <li><div class="check-icon"></div>At 1,000 followers: you enter the 30-day Creator Pilot Program (max 5 shoppable videos + 3 LIVEs per week, must generate 10 orders and pass quiz to unlock full access)</li>
+        <li><div class="check-icon"></div>At 5,000 followers: full access unlocked — unlimited shoppable content + LIVE product showcase</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Step 7 — standalone, TikTok Shop Setup for non-supported countries -->
+  <div class="step-card" onclick="toggleStep(this,7)">
+    <div class="step-header">
+      <div class="step-num n2">7</div>
+      <div class="step-title-wrap">
+        <div class="step-title">TikTok Shop Setup for non-supported countries</div>
+        <div class="step-subtitle">What to do if TikTok Shop isn't available where you live</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>TikTok Shop is currently natively available in 16 countries: <strong>United States, United Kingdom, Germany, France, Italy, Spain, Ireland, Japan, Singapore, Indonesia, Malaysia, Thailand, Vietnam, Philippines, Mexico,</strong> and <strong>Brazil</strong>. Countries expected to launch next include India, Hungary, Peru, and Kenya. If you are outside these regions, you still have options — but they require additional setup. The complete walkthrough with screenshots and current provider recommendations is covered inside the <strong>Distribution Tier</strong> module of your course. Below is the full overview of everything involved.</p>
+
+      <div class="section-label">Step 1 — Form a US LLC</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Register a legal US business entity — Wyoming and Delaware are the most popular states (low fees, no local presence required)</li>
+        <li><div class="check-icon"></div>Services: Doola, Northwest Registered Agent, Stripe Atlas, or a local attorney familiar with international clients</li>
+        <li><div class="check-icon"></div>Cost: typically $50–$200 one-time state fee + service fee. Total $100–$500 depending on provider.</li>
+        <li><div class="check-icon"></div>Timeline: 1–5 business days for most Wyoming filings; Delaware can be same-day with expedited processing</li>
+      </ul>
+
+      <div class="section-label">Step 2 — Get a US Address</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Required for LLC registration, TikTok Shop verification, and receiving mail</li>
+        <li><div class="check-icon"></div>Use a virtual mailbox service: Anytime Mailbox, iPostal1, or Stable — all provide a real street address (not a P.O. box)</li>
+        <li><div class="check-icon"></div>Cost: $10–$30/month. Use the same address for your LLC and TikTok business profile.</li>
+      </ul>
+
+      <div class="section-label">Step 3 — Open a US Bank Account or Payoneer</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>Mercury Bank:</strong> accepts non-US residents with a US LLC. Fully online application, no branch visit required. Free account.</li>
+        <li><div class="check-icon"></div><strong>Wise Business:</strong> multi-currency, easy international transfers, connects directly to TikTok Shop payouts</li>
+        <li><div class="check-icon"></div><strong>Payoneer:</strong> TikTok Shop officially supports Payoneer for international creator payouts — simplest route if you want to avoid the LLC entirely for payouts</li>
+      </ul>
+
+      <div class="section-label">Step 4 — Register on TikTok Shop as a Business</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Go to seller.tiktok.com → select United States → register as a business entity</li>
+        <li><div class="check-icon"></div>Submit your LLC's EIN (Employer Identification Number — obtained free from the IRS after LLC formation)</li>
+        <li><div class="check-icon"></div>Submit your US address and bank account details</li>
+        <li><div class="check-icon"></div>Verification takes 1–3 business days once documents are submitted</li>
+      </ul>
+
+      <div class="section-label">Important Considerations</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>VPN alone is not sufficient</strong> — TikTok detects VPN usage and may ban the account. A legitimate business entity is the compliant and sustainable path.</li>
+        <li><div class="check-icon"></div><strong>Tax obligations:</strong> Non-US residents with a US LLC may have annual US tax filing requirements (Form 5472 + 1120). Use an accountant familiar with international e-commerce — services like Doola Tax or a remote CPA handle this for $300–$500/year.</li>
+        <li><div class="check-icon"></div><strong>Content device:</strong> Create your TikTok creator account on a device with a US SIM or Wi-Fi connection where possible for full feature access</li>
+      </ul>
+      <div class="callout callout-amber"><strong>Timeline:</strong> Allow 2–3 weeks from start to fully operational TikTok Shop access when going through the LLC route. Factor this into your launch plan.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== PHASE 3: AI MODEL & PRODUCTS ===== -->
+<div class="phase-content" id="phase-2">
+  <div class="phase-header bg3">
+    <div class="phase-icon" style="background:#0dd9a420">🤖</div>
+    <div class="phase-meta"><h2>Phase 3 — Build Your AI Model &amp; Select Products</h2><p>Product selection is 80–90% of your success. The AI model amplifies it.</p></div>
+  </div>
+
+  <!-- Step 8 -->
+  <div class="step-card" onclick="toggleStep(this,8)">
+    <div class="step-header">
+      <div class="step-num n3">8</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Create a hyper-realistic AI influencer model</div>
+        <div class="step-subtitle">Realism = conversions. "AI slop" = people scroll past</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Your AI model is the face of your brand. It needs to look completely human. Uncanny valley or obvious CGI kills trust and kills conversions.</p>
+      <div class="section-label">Creation Tools</div>
+      <div class="tools-row">
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--purple)"></div>Higgsfield AI</div>
+        <div class="tool-chip"><div class="tool-dot" style="background:var(--purple)"></div>Nano Banana Pro</div>
+      </div>
+      <div class="section-label">Reference Photo Strategy</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Find a "mirror selfie" or casual "girl selfie" on Pinterest that matches your target demographic</li>
+        <li><div class="check-icon"></div>Use it as a pose/lighting/style reference in your generation prompt</li>
+        <li><div class="check-icon"></div>Do not copy or use real people's photos — use them only for composition reference in AI generation</li>
+      </ul>
+      <div class="section-label">Realism Prompt Elements</div>
+      <div class="callout callout-purple">Include in your prompt: <strong>natural skin texture, visible pores, soft diffused lighting, no CGI skin, candid pose, slight imperfections, shot on iPhone, natural hair flyaways, realistic eye detail</strong>. The goal is a photo that could pass as a real person's social media post.</div>
+      <div class="section-label">Demographic Strategy</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Age 35–50 for beauty, anti-aging, wellness, supplements — higher disposable income, more transformation-motivated</li>
+        <li><div class="check-icon"></div>Age 25–35 for fashion, fitness, lifestyle — aspirational content drives clicks</li>
+        <li><div class="check-icon"></div>Match the model's visible "problem" to the product (e.g., slight under-eye circles for an eye cream, natural aging skin for anti-aging serum)</li>
+      </ul>
+      <div class="warning-block">
+        <div class="warn-title">⚠ Legal &amp; ethical requirement: Disclosure</div>
+        Creating an AI model designed to look 100% human to sell products is subject to increasingly strict advertising disclosure laws — especially in the EU, UK, and US FTC guidelines. You <strong>must</strong> disclose that the influencer is AI-generated. TikTok also adds its own "Paid Partnership" label automatically when affiliate links are present. Add a clear disclosure in captions or on-screen text: "AI-generated influencer" or "#AIcontent". This protects you legally and, counterintuitively, often increases trust with audiences who appreciate the transparency. Skipping disclosure risks account removal and potential regulatory fines.
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 9 -->
+  <div class="step-card" onclick="toggleStep(this,9)">
+    <div class="step-header">
+      <div class="step-num n3">9</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Select winning products using the Profit Formula</div>
+        <div class="step-subtitle">Product choice is 80–90% of your success — don't guess</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Don't promote random trending products. Every product you commit to should pass all five filters of the Profit Formula:</p>
+      <div class="formula-box">
+        <div class="f-title">The Profit Formula — 5 Filters</div>
+        <div class="f-row"><div class="f-num" style="background:var(--pink)">1</div><div class="f-text"><strong>Problem-solving:</strong> Does it move someone away from real pain?<span class="f-sub">Back pain, hair loss, poor sleep, weight, focus, aging skin — emotional urgency = impulse purchases</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--purple)">2</div><div class="f-text"><strong>Proven demand:</strong> Minimum 2,000 units sold<span class="f-sub">Proven that real people are buying it. Below this = unvalidated market risk</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--teal)">3</div><div class="f-text"><strong>Low competition:</strong> Under 150–250 active creators, under 100k–300k total sales<span class="f-sub">High sales + few creators = still opportunity. High sales + many creators = saturated</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--amber)">4</div><div class="f-text"><strong>Price sweet spot:</strong> $20–$80<span class="f-sub">Low enough to impulse buy, high enough to earn meaningful commission ($2–24/sale)</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--green)">5</div><div class="f-text"><strong>Unfair advantage:</strong> Your AI model would naturally use this<span class="f-sub">A fit 40-year-old model selling supplements = credible. Same model selling gaming accessories = disconnect</span></div></div>
+      </div>
+      <div class="section-label">Research Tools</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>TikTok Creative Center → Top Products:</strong> free, filter by category + commission rate + region</li>
+        <li><div class="check-icon"></div><strong>Cal Data / Kalodata:</strong> shows real-time GMV, creator count, and revenue per product — the most accurate signal. ~$30/month, worth it once earning consistently.</li>
+        <li><div class="check-icon"></div><strong>TikTok Shop Marketplace:</strong> filter by revenue and sort by creator count to find sweet-spot opportunities</li>
+        <li><div class="check-icon"></div><strong>Competitor analysis:</strong> if 10+ creators are already running a product AND it still has under 250 creators total — it's validated and still open</li>
+      </ul>
+      <div class="callout callout-green"><strong>Prioritize GMV Max products:</strong> Brands running TikTok's GMV Max ad program get boosted distribution from TikTok's algorithm because they generate platform revenue. Your organic videos for these products get a visibility tailwind. Look for this badge in the Affiliate Center when selecting products.</div>
+    </div>
+  </div>
+
+  <!-- Step 10 -->
+  <div class="step-card" onclick="toggleStep(this,10)">
+    <div class="step-header">
+      <div class="step-num n3">10</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Apply to brand collaboration plans &amp; request samples</div>
+        <div class="step-subtitle">Open Plan vs Targeted Plan — and how to get free products</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <div class="callout callout-green"><strong>Open Plan (start here):</strong> Any creator can apply. Affiliate Center → Find Products → filter by niche + commission rate → Apply. Most brands approve in 24–48 hours.</div>
+      <div class="callout callout-purple"><strong>Targeted Plan (unlocks with growth):</strong> Brands directly invite creators. Higher commission rates — often 20–40%. These invitations arrive in your inbox once your account shows traction.</div>
+      <div class="section-label">Getting Free Samples</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>In Affiliate Center → find product → tap "Request Sample" if available</li>
+        <li><div class="check-icon"></div>Brands with "Free Sample" badge ship automatically — no pitch needed</li>
+        <li><div class="check-icon"></div>For others, send a short pitch: your niche, audience profile, and planned content format</li>
+        <li><div class="check-icon"></div>Even one short authentic unboxing clip filmed on your phone adds powerful social proof on top of AI content</li>
+      </ul>
+      <div class="callout callout-amber"><strong>Without a sample:</strong> Create AI video using stock footage + official product images from the brand's listing. Always disclose it as a paid promotion — TikTok adds the label automatically when affiliate links are attached, but add your own caption disclosure too.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== PHASE 4: CONTENT ENGINE ===== -->
+<div class="phase-content" id="phase-3">
+  <div class="phase-header bg4">
+    <div class="phase-icon" style="background:#ff9f0a20">🎬</div>
+    <div class="phase-meta"><h2>Phase 4 — Build Your AI Content Engine</h2><p>Master the 3 C's: Capture, Control, Convert. Then systematize it.</p></div>
+  </div>
+
+  <!-- Step 11 -->
+  <div class="step-card" onclick="toggleStep(this,11)">
+    <div class="step-header">
+      <div class="step-num n4">11</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Write high-converting scripts with AI</div>
+        <div class="step-subtitle">The 80/20 method + the 4-part formula that top creators use</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <div class="rule-box">
+        <span class="rule-label amber">80/20 RULE</span>
+        <span class="rule-text">Find a viral video in your niche. Take 80% of its structural framework (pacing, hook type, emotional arc, CTA format) and add a 20% original twist (different product, different angle, different hook). You're borrowing proven psychology, not copying content.</span>
+      </div>
+      <p>Use ChatGPT or Claude to reverse-engineer viral scripts: paste a transcript and ask it to break down the hook mechanism, psychological triggers, pacing, and why the CTA works.</p>
+      <div class="formula-box" style="margin-top:10px">
+        <div class="f-title">The 4-Part Conversion Formula</div>
+        <div class="f-row"><div class="f-num" style="background:var(--pink)">H</div><div class="f-text"><strong>Hook (0–2s):</strong> Stop the scroll immediately<span class="f-sub">"Stop scrolling if you have [problem]" / "I wish someone told me about this sooner" / "POV: you finally found the thing that works"</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--purple)">P</div><div class="f-text"><strong>Problem (2–5s):</strong> Agitate the pain they already feel<span class="f-sub">Make them feel seen. Name the specific frustration — don't be generic.</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--teal)">S</div><div class="f-text"><strong>Solution (5–20s):</strong> The product as the rescue<span class="f-sub">Show results, not features. Before/after. Transformation. Keep it short — 7–15 seconds total is often enough.</span></div></div>
+        <div class="f-row"><div class="f-num" style="background:var(--amber)">C</div><div class="f-text"><strong>CTA (last 2–3s):</strong> Direct and specific<span class="f-sub">"Link in bio" / "Shop below 👇" / "Tap the bag to grab yours"</span></div></div>
+      </div>
+      <div class="callout callout-green"><strong>Example Claude prompt:</strong> "Write a 15-second TikTok UGC script for [product] targeting women aged 35–50 with [problem]. Use a strong pattern-interrupt hook. Make it conversational, not salesy. End with a direct CTA pointing to the product link."</div>
+      <p>Generate 5–10 script variations per product. The hook is the variable — test aggressively.</p>
+    </div>
+  </div>
+
+  <!-- Step 12 -->
+  <div class="step-card" onclick="toggleStep(this,12)">
+    <div class="step-header">
+      <div class="step-num n4">12</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Produce faceless AI videos at scale</div>
+        <div class="step-subtitle">The full production workflow from script to published video</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>The standard high-converting TikTok Shop format is <strong>7–15 seconds</strong>, no talking head required — a before/after transformation or product demo with voiceover performs best in most niches.</p>
+      <div class="section-label">Full Production Workflow</div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>Step 1 — Script:</strong> Generate with Claude/ChatGPT using the formula above</li>
+        <li><div class="check-icon"></div><strong>Step 2 — Voiceover:</strong> Paste script into ElevenLabs → choose voice matching your brand (energetic, warm, authoritative) → export MP3. Slightly faster than natural speech. Free alternative: TikTok native TTS.</li>
+        <li><div class="check-icon"></div><strong>Step 3 — Video clips:</strong> Use Kling AI to generate product-relevant footage. Or source from brand's listing, stock libraries, or your own product sample.</li>
+        <li><div class="check-icon"></div><strong>Step 4 — AI model integration:</strong> Generate your model with Higgsfield AI or Nano Banana Pro using your reference pose. Drop model clips into CapCut alongside product footage.</li>
+        <li><div class="check-icon"></div><strong>Step 5 — Editing in CapCut:</strong> Sync voiceover + clips → add auto-captions (mandatory — 80% watch on mute) → add trending audio at low volume → add "Shop below 👇" text overlay in final 2 seconds.</li>
+        <li><div class="check-icon"></div><strong>Step 6 — Export:</strong> 9:16 vertical, 1080p, under 50MB for fastest upload.</li>
+      </ul>
+      <div class="callout callout-amber"><strong>CapCut template system:</strong> After producing your first 3 videos, save your timeline as a reusable template. Subsequent videos become a 15–20 minute swap-and-publish operation.</div>
+    </div>
+  </div>
+
+  <!-- Step 13 -->
+  <div class="step-card" onclick="toggleStep(this,13)">
+    <div class="step-header">
+      <div class="step-num n4">13</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Add affiliate links and publish</div>
+        <div class="step-subtitle">The technical setup that turns views into commissions</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Upload video → tap "Add Link" → "Product" → search your approved affiliate product</li>
+        <li><div class="check-icon"></div>The yellow shopping bag icon appears on your video — this is what drives purchases</li>
+        <li><div class="check-icon"></div>Add up to 5 products per video — include complementary products to increase average order value</li>
+        <li><div class="check-icon"></div>Write a caption with a hook + niche hashtags (3–5 specific, 1–2 broad) + disclosure</li>
+        <li><div class="check-icon"></div>Post time: 6–9am or 7–10pm in your target audience's timezone for best early engagement</li>
+      </ul>
+      <div class="callout callout-green"><strong>Disclosure:</strong> TikTok auto-adds "Paid Partnership" when affiliate links are present. Also add a manual disclosure in your caption or on-screen text, especially if using an AI model. This is legally required in most markets and is good practice everywhere.</div>
+    </div>
+  </div>
+
+  <!-- Step 14 -->
+  <div class="step-card" onclick="toggleStep(this,14)">
+    <div class="step-header">
+      <div class="step-num n4">14</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Build your weekly content production system</div>
+        <div class="step-subtitle">Batch creation is how you sustain 10–15 videos/day without burning out</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>Monday:</strong> Research 5–7 products passing the Profit Formula. Generate 15–20 script variations with AI.</li>
+        <li><div class="check-icon"></div><strong>Tuesday:</strong> Generate all model images and AI video clips. Produce voiceovers in bulk via ElevenLabs.</li>
+        <li><div class="check-icon"></div><strong>Wednesday:</strong> Edit all videos in CapCut using templates. Apply captions, music, overlays.</li>
+        <li><div class="check-icon"></div><strong>Thursday:</strong> Schedule the week's posts via TikTok's native scheduler. Apply affiliate links to each.</li>
+        <li><div class="check-icon"></div><strong>Friday–Sunday:</strong> Monitor performance. Note which hooks are outperforming. Prepare iterations for next week.</li>
+      </ul>
+      <div class="rule-box">
+        <span class="rule-label">VOLUME RULE</span>
+        <span class="rule-text">Top creators post 10–15 videos per day at the growth phase. You're feeding the algorithm data about what resonates. Think of it as paying for data with time instead of money. Once a winner emerges, volume can scale back and depth increases.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ===== PHASE 5: SCALE & PROFIT ===== -->
+<div class="phase-content" id="phase-4">
+  <div class="phase-header bg5">
+    <div class="phase-icon" style="background:#30d15820">📈</div>
+    <div class="phase-meta"><h2>Phase 5 — Scale, Optimize &amp; Maximize Profit</h2><p>From first commissions to consistent $2k–$10k/month income.</p></div>
+  </div>
+
+  <!-- Step 15 -->
+  <div class="step-card" onclick="toggleStep(this,15)">
+    <div class="step-header">
+      <div class="step-num n5">15</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Apply the 95/5 rule when you find a winner</div>
+        <div class="step-subtitle">Don't move on when something works — milk it systematically</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <div class="rule-box">
+        <span class="rule-label teal">95/5 RULE</span>
+        <span class="rule-text">When a video gets traction (even 10k–12k views is a signal), do NOT move on. Keep 95% of the video identical — the body, the product demo, the CTA, the voiceover. Change only the 5% that is the hook. You're refreshing a proven asset, not rebuilding from scratch.</span>
+      </div>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Run 5–10 hook variations on the same winning video body</li>
+        <li><div class="check-icon"></div>Test: question hooks vs. statement hooks vs. POV hooks vs. "mistake" hooks</li>
+        <li><div class="check-icon"></div>The winning hook × winning body = your scalable content asset</li>
+        <li><div class="check-icon"></div>Only retire a video when CTR drops below 1% consistently over 5+ days</li>
+      </ul>
+      <div class="callout callout-green"><strong>Why this works:</strong> The algorithm already knows this content's audience. Changing only the hook gives you a fresh bid for new viewers without losing the ranking signal the video has built.</div>
+    </div>
+  </div>
+
+  <!-- Step 16 -->
+  <div class="step-card" onclick="toggleStep(this,16)">
+    <div class="step-header">
+      <div class="step-num n5">16</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Analyze your data — cut losers, double winners</div>
+        <div class="step-subtitle">The numbers tell you exactly what to do next</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <ul class="checklist">
+        <li><div class="check-icon"></div><strong>Watch time % &gt; 50%:</strong> Hook is working, content is holding attention — scale this format</li>
+        <li><div class="check-icon"></div><strong>Click-through rate &gt; 2%:</strong> Product-audience fit is strong — apply 95/5 rule immediately</li>
+        <li><div class="check-icon"></div><strong>Less than 1 sale per 100 clicks:</strong> Product landing page or pricing is the problem — switch products</li>
+        <li><div class="check-icon"></div><strong>High views, zero clicks:</strong> Wrong audience or weak CTA — test new hook that speaks to buyers, not viewers</li>
+        <li><div class="check-icon"></div>Check Affiliate Center weekly: compare GMV (gross merchandise value) per product to identify your actual earners vs. vanity performers</li>
+      </ul>
+      <div class="callout callout-amber"><strong>Key metric:</strong> Views are vanity. GMV is reality. A video with 5k views and 3 sales beats a video with 100k views and 0 sales every time. Optimize for GMV, not reach.</div>
+    </div>
+  </div>
+
+  <!-- Step 17 -->
+  <div class="step-card" onclick="toggleStep(this,17)">
+    <div class="step-header">
+      <div class="step-num n5">17</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Negotiate commission increases and retainer deals</div>
+        <div class="step-subtitle">Move from 20% to 40%+ and add passive income streams</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Once you have consistent sales data for a product, you have real leverage with brands.</p>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Contact the brand directly via the Affiliate Center messaging or their email: "I've driven X units of [product] in the past 30 days at a 20% commission. I'd like to discuss moving to a 35–40% rate in exchange for more dedicated content."</li>
+        <li><div class="check-icon"></div>Most brands will negotiate — they have margin and they'd rather pay you more to keep a proven performer than lose you</li>
+        <li><div class="check-icon"></div><strong>Retainer deals:</strong> Brands will pay $50–100/hour for you to go LIVE promoting their products. This is separate from affiliate commissions — it's a flat fee on top. Negotiate this once you have a track record of converting on LIVE.</li>
+        <li><div class="check-icon"></div>Apply to TikTok Shop Affiliate "Star" and "Elite" creator tiers — these unlock exclusive brand partnerships and higher base commission rates across the board</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="step-card" onclick="toggleStep(this,18)">
+    <div class="step-header">
+      <div class="step-num n5">18</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Unlock TikTok LIVE for 10x commission potential</div>
+        <div class="step-subtitle">🔒 Coming soon — advanced module</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <div class="callout callout-purple"><strong>🔒 This module is coming soon.</strong> TikTok LIVE shopping is an advanced monetization strategy covered in a dedicated module. This course focuses on AI-generated content and faceless video production first — master that system before adding LIVE streaming to your workflow.</div>
+    </div>
+  </div>
+
+  <!-- Step 19 -->
+  <div class="step-card" onclick="toggleStep(this,19)">
+    <div class="step-header">
+      <div class="step-num n5">19</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Amplify winners with TikTok Spark Ads</div>
+        <div class="step-subtitle">Put paid behind what's already working organically</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Spark Ads let you boost existing organic TikTok videos with paid budget — they keep the original engagement (comments, likes, shares) and run it as an ad. This is the most efficient form of TikTok paid promotion for affiliates.</p>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Only Spark Ads on videos already earning organically — never spend money testing unproven content</li>
+        <li><div class="check-icon"></div>Start with $20–50/day to validate ROI before scaling budget</li>
+        <li><div class="check-icon"></div>Target the same demographic as your AI model and organic audience</li>
+        <li><div class="check-icon"></div><strong>Prioritize GMV Max brands for Spark Ads:</strong> TikTok's own algorithm gives additional distribution to content promoting GMV Max products — your paid spend gets compounded by organic boost</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Step 20 -->
+  <div class="step-card" onclick="toggleStep(this,20)">
+    <div class="step-header">
+      <div class="step-num n5">20</div>
+      <div class="step-title-wrap">
+        <div class="step-title">Scale with multiple accounts and outsourcing</div>
+        <div class="step-subtitle">Turn one working system into a portfolio of income streams</div>
+      </div>
+      <div class="step-toggle">+</div>
+    </div>
+    <div class="step-body">
+      <p>Once account one is consistently earning, the system itself is the product. Replicate it:</p>
+      <ul class="checklist">
+        <li><div class="check-icon"></div>Launch a second niche account using the identical AI workflow in a new niche</li>
+        <li><div class="check-icon"></div>Create a second AI model with a distinct persona and demographic for the new niche</li>
+        <li><div class="check-icon"></div>Hire a virtual assistant ($5–10/hr on Upwork) for video editing, scheduling, and caption writing</li>
+        <li><div class="check-icon"></div>You stay focused on: product research, script strategy, performance analysis, brand negotiations</li>
+        <li><div class="check-icon"></div>Each additional account is mostly passive time investment once the templates and VA workflow are set</li>
+      </ul>
+      <div class="metrics-grid">
+        <div class="metric-card"><div class="metric-val" style="color:var(--teal)">$100–500</div><div class="metric-lbl">Month 1–2<br>(learning phase)</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:var(--amber)">$500–2k</div><div class="metric-lbl">Month 3–4<br>(optimizing)</div></div>
+        <div class="metric-card"><div class="metric-val" style="color:var(--green)">$2k–10k+</div><div class="metric-lbl">Month 5–6+<br>(scaling)</div></div>
+      </div>
+      <div class="callout callout-green" style="margin-top:10px"><strong>Note on timelines:</strong> These are realistic ranges based on creator reports — not guarantees. Results depend heavily on niche selection, content quality, and consistency. Most students who fail do so by quitting in month 1–2 before the data accumulates.</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let completedSteps = new Set();
+const TOTAL = 20;
+function showPhase(idx, el) {
+  document.querySelectorAll('.phase-content').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.phase-pill').forEach(p => p.classList.remove('active'));
+  document.getElementById('phase-' + idx).classList.add('active');
+  el.classList.add('active');
+}
+function toggleStep(card, stepNum) {
+  const wasOpen = card.classList.contains('open');
+  card.classList.toggle('open');
+  if (!wasOpen) completedSteps.add(stepNum);
+  updateProgress();
+}
+function updateProgress() {
+  const done = completedSteps.size;
+  const pct = Math.round((done / TOTAL) * 100);
+  document.getElementById('prog-fill').style.width = pct + '%';
+  document.getElementById('prog-pct').textContent = done + ' / ' + TOTAL + ' steps';
+}
+</script>
+</body>
+</html>
